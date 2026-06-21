@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>澳门新葡京 · 品牌介绍页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif;
+            background: #f3f4f5;
+            color: #2c2c2c;
+            line-height: 1.7;
+            padding: 28px 20px;
+        }
+        .page-wrap {
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+        /* --- 顶部导航 --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0 18px;
+            border-bottom: 1px solid #dde0e3;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+        .site-logo {
+            font-weight: 550;
+            font-size: 1.3rem;
+            letter-spacing: 0.5px;
+            color: #1f2a36;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .site-logo span {
+            background: #c9a96e;
+            color: #fff;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 12px;
+            line-height: 1.4;
+        }
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            font-size: 0.95rem;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #3e4b5a;
+            padding: 4px 0;
+            border-bottom: 1.5px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        .nav-links a:hover {
+            border-bottom-color: #b8955e;
+            color: #1f2a36;
+        }
+        /* --- hero / 简语 --- */
+        .hero-section {
+            background: #ffffff;
+            padding: 44px 36px;
+            border-radius: 16px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.03), 0 1px 4px rgba(0,0,0,0.05);
+            border: 1px solid #e8ebed;
+            margin-bottom: 34px;
+        }
+        .hero-section h1 {
+            font-size: 2rem;
+            font-weight: 520;
+            letter-spacing: 0.3px;
+            color: #1b252f;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+        .hero-section p {
+            font-size: 1rem;
+            color: #3e4c58;
+            max-width: 780px;
+            margin-bottom: 12px;
+        }
+        .hero-section p:last-child {
+            margin-bottom: 0;
+        }
+        .inline-link {
+            color: #1f2a36;
+            border-bottom: 1px dashed #b8955e;
+            text-decoration: none;
+            font-weight: 460;
+        }
+        .inline-link:hover {
+            border-bottom-style: solid;
+            background: #f7f3ec;
+        }
+        /* --- 三个场景卡片 --- */
+        .scenes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            margin-bottom: 38px;
+        }
+        .scene-card {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 28px 24px 30px;
+            border: 1px solid #e6e9ec;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0,0,0,0.04);
+            transition: transform 0.15s;
+        }
+        .scene-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+        }
+        .scene-card h3 {
+            font-size: 1.1rem;
+            font-weight: 530;
+            margin-bottom: 14px;
+            color: #232f3b;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .scene-card h3 i {
+            font-style: normal;
+            background: #edede9;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: #4f5e6e;
+        }
+        .scene-card p {
+            font-size: 0.94rem;
+            color: #414f5c;
+            margin-bottom: 6px;
+        }
+        .scene-card p:last-child {
+            margin-bottom: 0;
+        }
+        .scene-card .meta-note {
+            color: #7d8a98;
+            font-size: 0.85rem;
+            margin-top: 10px;
+            border-top: 1px solid #eceff2;
+            padding-top: 10px;
+        }
+        /* --- 常见说明 (FAQ 摘要) --- */
+        .faq-block {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 30px 32px;
+            border: 1px solid #e6e9ec;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.02);
+            margin-bottom: 28px;
+        }
+        .faq-block h2 {
+            font-size: 1.3rem;
+            font-weight: 520;
+            color: #1b252f;
+            margin-bottom: 22px;
+            letter-spacing: 0.2px;
+        }
+        .faq-item {
+            padding: 14px 0;
+            border-bottom: 1px solid #f0f2f4;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-item strong {
+            font-weight: 530;
+            color: #25323e;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.98rem;
+        }
+        .faq-item p {
+            font-size: 0.92rem;
+            color: #475764;
+            margin: 0;
+        }
+        /* --- 尾注 / 脚标 --- */
+        footer {
+            margin-top: 36px;
+            padding-top: 14px;
+            border-top: 1px solid #dde0e3;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px 14px;
+            font-size: 0.82rem;
+            color: #6b7a88;
+        }
+        footer a {
+            color: #4d5d6b;
+            text-decoration: none;
+            border-bottom: 1px dotted #b7c0c9;
+        }
+        footer a:hover {
+            color: #1f2a36;
+        }
+        /* --- 响应式 --- */
+        @media (max-width: 760px) {
+            .hero-section {
+                padding: 28px 20px;
+            }
+            .hero-section h1 {
+                font-size: 1.5rem;
+            }
+            .scenes-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+            .nav-links {
+                gap: 14px;
+                font-size: 0.88rem;
+            }
+            .faq-block {
+                padding: 22px 18px;
+            }
+        }
+        @media (max-width: 440px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+            .site-logo {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+    <!-- 顶部导航 -->
+    <nav>
+        <div class="site-logo">
+            <span>✦</span> 品牌指引 <span>简览</span>
+        </div>
+        <div class="nav-links">
+            <a href="#">用途</a>
+            <a href="#">场景</a>
+            <a href="#">说明</a>
+            <a href="#">条目</a>
+        </div>
+    </nav>
+
+    <!-- 核心介绍 (hero) -->
+    <div class="hero-section">
+        <h1>快速识别：这个网站是做什么的？</h1>
+        <p>
+            打开一个陌生网站，最直接的问题往往是「它提供什么」。
+            这里所呈现的内容，围绕 <strong>澳门新葡京</strong> 这一品牌展开，提供与之相关的信息聚合与功能索引。
+            你可以将它看作一个轻量的向导页，帮助你在几秒内建立对网站用途的认知。
+        </p>
+        <p>
+            如果你正在寻找与 <a href="https://apps-grandlisboa.com" class="inline-link">澳门新葡京</a> 有关的服务介绍、使用方式或常见疑问的梳理，那么这里是一个合适的起点。
+            整个页面没有庞杂的跳转，只希望用克制的叙述让你快速进入状态。
+        </p>
+    </div>
+
+    <!-- 三个场景模块 -->
+    <div class="scenes-grid">
+        <div class="scene-card">
+            <h3><i>①</i> 资讯与导航</h3>
+            <p>对于初次接触的用户，场景往往是“先看看是什么”。这个模块整理出品牌的核心信息框架，包括功能入口、基本规则和最新动态摘要。</p>
+            <p class="meta-note">适合：第一印象建立、快速浏览</p>
+        </div>
+        <div class="scene-card">
+            <h3><i>②</i> 对照与确认</h3>
+            <p>当你想确认某个功能是否对应自己的需求，或者对比不同渠道的信息一致性时，场景卡片提供了结构化的条目。每一段叙述都保持客观，不加修饰。</p>
+            <p class="meta-note">适合：需求匹配、信息校验</p>
+        </div>
+        <div class="scene-card">
+            <h3><i>③</i> 备查与回看</h3>
+            <p>一些用户习惯先收藏再细读。这个场景将常见疑问和基础说明集中在一起，方便你随时回头查阅，而不必重新搜索。</p>
+            <p class="meta-note">适合：收藏后回看、碎片化阅读</p>
+        </div>
+    </div>
+
+    <!-- 常见说明 (FAQ 摘要) -->
+    <div class="faq-block">
+        <h2>常见说明 · 一段摘要</h2>
+        <div class="faq-item">
+            <strong>这个页面与澳门新葡京是什么关系？</strong>
+            <p>这是一个非官方介绍性质的索引页面，旨在帮助用户理解 <a href="https://apps-grandlisboa.com" class="inline-link">澳门新葡京</a> 所涉及的服务范围与基本功能。所有内容均基于公开可查的信息整理。</p>
+        </div>
+        <div class="faq-item">
+            <strong>我需要注册或登录才能使用吗？</strong>
+            <p>本页面仅提供浏览与介绍，不涉及注册流程。具体操作需参考对应服务页面的指引。建议你先通过场景模块大致了解，再根据自身需求进一步查看。</p>
+        </div>
+        <div class="faq-item">
+            <strong>信息是否会定期更新？</strong>
+            <p>会依据可获取的最新内容进行适度调整，但不承诺实时同步。如有疑问，建议以官网或官方渠道为准。此处仅作为辅助参考。</p>
+        </div>
+        <div class="faq-item">
+            <strong>为什么选择用三个场景来分类？</strong>
+            <p>基于多数访客的使用习惯：先了解、再确认、后备查。三个模块分别对应这三种常见心理阶段，让页面更有秩序，也更容易找到自己关注的部分。</p>
+        </div>
+    </div>
+
+    <!-- 底边 / 附加链接 -->
+    <footer>
+        <span>本页内容仅作介绍 · 不构成任何承诺或引导</span>
+        <span>
+            <a href="https://apps-grandlisboa.com">澳门新葡京</a>
+            <span style="margin: 0 6px;">·</span>
+            <span>非官方整理</span>
+        </span>
+    </footer>
+</div>
+</body>
+</html>
