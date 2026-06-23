@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>乐鱼 · 数字场景与体验杂志</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f2f2f0;
+      font-family: "Inter", "Helvetica Neue", system-ui, -apple-system, sans-serif;
+      color: #1e1e1e;
+      line-height: 1.7;
+      padding: 2rem 1.2rem;
+    }
+
+    .page {
+      max-width: 1060px;
+      margin: 0 auto;
+    }
+
+    /* —— hero 横幅 —— */
+    .hero {
+      background: #ffffff;
+      border-radius: 32px;
+      padding: 3rem 2.5rem 2.8rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02), 0 2px 4px rgba(0,0,0,0.02);
+      border: 1px solid #e8e8e6;
+      margin-bottom: 2.4rem;
+      position: relative;
+      transition: box-shadow 0.2s;
+    }
+
+    .hero:hover {
+      box-shadow: 0 12px 28px rgba(0,0,0,0.04);
+    }
+
+    .hero::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: #c4b59a;
+      margin-top: 2.2rem;
+      border-radius: 2px;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      color: #1c1c1c;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero .sub {
+      font-size: 1.05rem;
+      color: #5e5e5c;
+      font-weight: 380;
+      max-width: 44rem;
+    }
+
+    .hero .meta-tag {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 0.78rem;
+      color: #9b9b97;
+      letter-spacing: 0.3px;
+      background: #f0efec;
+      padding: 0.2rem 1rem;
+      border-radius: 30px;
+    }
+
+    /* —— 卡片分区 —— */
+    .card-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 2rem 2.4rem 2.2rem;
+      border: 1px solid #e6e6e3;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      transition: transform 0.15s ease, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 18px rgba(0,0,0,0.04);
+      transform: translateY(-1px);
+    }
+
+    .card h2 {
+      font-size: 1.35rem;
+      font-weight: 440;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.75rem;
+      color: #2a2a28;
+      border-left: 3px solid #c4b59a;
+      padding-left: 0.9rem;
+    }
+
+    .card p {
+      margin-bottom: 0.9rem;
+      color: #2f2f2d;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .card .inset-note {
+      background: #f8f7f5;
+      border-radius: 16px;
+      padding: 0.9rem 1.2rem;
+      margin-top: 0.8rem;
+      font-size: 0.92rem;
+      border-left: 2px solid #d6cdbe;
+      color: #3d3d3a;
+    }
+
+    /* —— 页尾提示区 —— */
+    .footer-note {
+      margin-top: 2.6rem;
+      padding: 1.6rem 2rem;
+      background: #ffffffdc;
+      backdrop-filter: blur(2px);
+      border-radius: 24px;
+      border: 1px solid #dddcd9;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.01);
+      text-align: center;
+      font-size: 0.95rem;
+      color: #3a3a37;
+    }
+
+    .footer-note .highlight-link {
+      color: #595445;
+      text-decoration: none;
+      border-bottom: 1px solid #c4b59a;
+      font-weight: 450;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    .footer-note .highlight-link:hover {
+      border-bottom: 1px solid #4f4a3d;
+      color: #2b2a27;
+    }
+
+    .footer-note .foot-emoji {
+      margin: 0 0.4rem;
+      opacity: 0.6;
+    }
+
+    /* —— 响应式 —— */
+    @media (max-width: 640px) {
+      body { padding: 1.2rem 0.9rem; }
+      .hero { padding: 2rem 1.5rem; }
+      .hero h1 { font-size: 2rem; }
+      .card { padding: 1.5rem 1.2rem; }
+      .footer-note { padding: 1.2rem 1rem; }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 1.7rem; }
+      .hero .sub { font-size: 0.95rem; }
+      .card h2 { font-size: 1.15rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 首页横幅 hero -->
+  <div class="hero">
+    <h1>乐鱼 · 场景与体验</h1>
+    <div class="sub">
+      数字交互的边界正在溶解，而“鱼”成为连接内容、界面与用户感知的隐喻。<br>
+      从浏览到沉浸，从一个页面到一个生态，乐鱼所代表的是一种流动的、非线性的访问结构。
+    </div>
+    <div class="meta-tag">杂志专题 · 界面生态</div>
+  </div>
+
+  <!-- 三段自然介绍 / 卡片式 -->
+  <div class="card-grid">
+
+    <div class="card">
+      <h2>流动的锚点：页面即水域</h2>
+      <p>
+        当我们谈论一个数字平台时，常常忽略它背后如何通过信息架构来引导视线。在“乐鱼”的逻辑中，每一个链接都不再是孤立的端点，而是像鱼群一样彼此呼应，构成一个可回溯、可探索的网络。这种体验要求设计者放弃静态的导航树，转而采用更灵活的模块化重组——正如页面之间不设硬边界，用户可以在内容的支流中自由转向。
+      </p>
+      <p>
+        从用户角度看，这种模式降低了认知负荷：不需要记住层级，只需要跟随兴趣。对于内容提供方而言，则意味着需要将每一条信息都视为一个独立的“微型入口”，同时保持整体气韵的连贯。这不只是一种视觉风格，更是一种交互哲学。
+      </p>
+      <div class="inset-note">
+        ⚬ 日本信息建筑师曾用“水样界面”描述类似概念，乐鱼的内核与之不谋而合。
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>浅灰基底上的叙事节奏</h2>
+      <p>
+        为什么选择浅灰背景与细边框？因为在信息密度较高的杂志式布局中，过于鲜艳的底色会抢夺文字的注意力。低饱和度的背景让卡片之间的过渡变得柔和，同时保留了内容本身的重量。每一张卡片都像是一则独立的章节，边框和阴影则提供了微妙的“纸张感”——这种触感在数字阅读中越来越稀缺。
+      </p>
+      <p>
+        更进一步，通过分区卡片与间隔留白，我们尝试在滚动过程中植入“呼吸点”。读者不需要一次吸收太多内容，而是可以在卡片之间的空白处稍作停留，再决定是否进入下一个话题。这种节奏不同于传统长文章，更接近翻阅一本设计年鉴。
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>场景延伸：从浏览到连接</h2>
+      <p>
+        将视线拉回实际使用场景——一个知识型访客可能会在某个午后打开页面，在卡片之间跳转，最后顺着链接进入更具体的页面。此时，整个网站的结构就像一张由兴趣点构成的地图，而“乐鱼”恰好位于这张地图的枢纽位置，它不强制用户走向哪里，而是提供多个可触及的方向。
+      </p>
+      <p>
+        这也是为什么我们更倾向于把链接自然嵌入叙述，例如当你希望进一步了解该平台的架构与内容定位时，可以看看 <a href="https://webmobile-leyu.com" style="color:#595445;text-decoration:none;border-bottom:1px solid #c4b59a;font-weight:450;">乐鱼</a> 本身所呈现的模块思路。它不是一个终点，而是一个参照系，帮助你理解杂志式页面与无边界导航如何在实际项目中落地。
+      </p>
+      <div class="inset-note">
+        ⚬ 如果你对信息架构或交互细节感兴趣，不妨从上面这个链接开始回溯整个页面的设计逻辑。
+      </div>
+    </div>
+  </div>
+
+  <!-- 页尾访问提示 -->
+  <div class="footer-note">
+    <span class="foot-emoji">⤻</span> 
+    本专题所有内容均围绕“界面即叙事”展开，而 
+    <a href="https://webmobile-leyu.com" class="highlight-link">乐鱼</a> 
+    正是这一思路的长期实践者。你读到的每一段，都是它生态中的一次切片。
+    <span class="foot-emoji">⤻</span>
+  </div>
+
+  <!-- 极小占位，无额外内容 -->
+</div>
+</body>
+</html>
