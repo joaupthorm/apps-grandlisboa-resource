@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>主题探索 · 乐鱼</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background-color: #f2f4f6;
+      color: #1e2a32;
+      line-height: 1.7;
+      padding: 2rem 1.5rem;
+    }
+
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* 标题区 — 留白呼吸 */
+    .hero {
+      margin-bottom: 3rem;
+      text-align: left;
+      border-bottom: 1px solid #dce1e6;
+      padding-bottom: 1.75rem;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #111;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero .sub {
+      font-size: 1rem;
+      color: #5f6c7a;
+      max-width: 70%;
+      border-left: 3px solid #7b8b9e;
+      padding-left: 1rem;
+    }
+
+    /* 卡片通用设置 — 浅灰背景、柔和阴影、细边框 */
+    .card {
+      background: #ffffff;
+      border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.03);
+      border: 1px solid #e8ecf0;
+      padding: 1.75rem 2rem;
+      margin-bottom: 2rem;
+      transition: box-shadow 0.15s;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04), 0 1px 4px rgba(0, 0, 0, 0.04);
+    }
+
+    .card h2 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      color: #1e2a32;
+      border-bottom: 1px solid #eef1f4;
+      padding-bottom: 0.5rem;
+    }
+
+    .card p {
+      margin-bottom: 1rem;
+      color: #2e3b47;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 引用卡片 — 有强调感 */
+    .quote-card {
+      background: #f7f9fb;
+      border-left: 4px solid #8296a8;
+      border-radius: 10px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 2rem;
+      font-style: normal;
+      color: #374957;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    }
+
+    .quote-card p {
+      margin-bottom: 0.25rem;
+    }
+
+    .quote-card .source {
+      font-size: 0.9rem;
+      color: #6b7b8b;
+      margin-top: 0.6rem;
+      display: block;
+    }
+
+    /* 场景列表 — 轻量 */
+    .scene-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 0 0;
+    }
+
+    .scene-list li {
+      padding: 0.4rem 0;
+      border-bottom: 1px dashed #e2e7ec;
+      display: flex;
+      gap: 0.6rem;
+    }
+
+    .scene-list li:last-child {
+      border-bottom: none;
+    }
+
+    .scene-list li::before {
+      content: "·";
+      color: #6f8396;
+      font-weight: bold;
+    }
+
+    /* 链接样式 — 克制但清晰 */
+    a {
+      color: #1f4b6e;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-bottom 0.1s, color 0.1s;
+    }
+
+    a:hover {
+      border-bottom: 1px solid #1f4b6e;
+      color: #0c2b40;
+    }
+
+    /* 访问句 (页脚) */
+    .visit-note {
+      margin-top: 2.8rem;
+      padding: 1.2rem 0;
+      border-top: 1px solid #dce1e6;
+      font-size: 0.95rem;
+      color: #4d5e6d;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .visit-note .left {
+      max-width: 70%;
+    }
+
+    .visit-note .right {
+      font-size: 0.85rem;
+      color: #6f8396;
+    }
+
+    /* 响应式 */
+    @media (max-width: 600px) {
+      body {
+        padding: 1.2rem 1rem;
+      }
+
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+
+      .hero .sub {
+        max-width: 100%;
+      }
+
+      .card {
+        padding: 1.25rem 1.2rem;
+      }
+
+      .quote-card {
+        padding: 1.2rem 1.2rem;
+      }
+
+      .visit-note {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+      }
+
+      .visit-note .left {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- hero -->
+  <div class="hero">
+    <h1>鱼·乐·志</h1>
+    <div class="sub">从“乐”与“鱼”的意象出发，短暂停靠，整理一些关于流动与宁静的笔记。</div>
+  </div>
+
+  <!-- 导语卡片 -->
+  <div class="card">
+    <h2>一段引子&#8230;&#8230;</h2>
+    <p>“乐鱼”二字，初看像是指一种怡然自得的状态：鱼在水中，不争不抢，却自有天地。若将其拆解，乐为喜悦、通达，鱼为游动、自由。两者相遇，恰好构成一种松弛又清醒的视角——既接受流水般的变动，也不放弃内心的节奏。</p>
+    <p>这篇短文尝试从日常观察与书本片段中，整理几条线索，聊一聊人与空间、工具与心境之间那种不易察觉的呼应。不需要太用力，也不必寻找答案，只是顺着话题走一段。</p>
+  </div>
+
+  <!-- 正文一：关于安静的空间 -->
+  <div class="card">
+    <h2>关于安静的空间</h2>
+    <p>去年秋天我花了很多时间整理一个闲置的书桌角落。清理掉过期的便签、干透的笔、积灰的数据线——扔掉之后，桌面空出一半。然后我把笔记本放在左侧，右侧留出一块完整区域，只放了一盏台灯和一本空白本子。</p>
+    <p>那个角落后来成为我每天最早醒来的地方。没有通知音，没有闪烁的光标，只有翻页和偶尔打火机点蜡烛的声音。很奇怪，当环境变得安静而克制，思维反而跟着清晰起来。鱼缸里的鱼不会因为摆设太多而游得更自在；人大概也是。</p>
+    <p>少即是多的道理老生常谈，但真正动手去做，才会发现“少”不是剥夺，而是挑选出真正需要的东西，然后信任它们。</p>
+  </div>
+
+  <!-- 引用提示 -->
+  <div class="quote-card">
+    <p>“水流得越慢，鱼越容易看清自己的影子。人也是一样，不是走得越远就越明白，有时候停在一个小地方，反而想通了很多事。”</p>
+    <span class="source">—— 摘自某本旧杂志的访谈，作者不详</span>
+  </div>
+
+  <!-- 正文二：工具、边界与自在 -->
+  <div class="card">
+    <h2>工具、边界与自在</h2>
+    <p>说到“乐鱼”这个站点，它的定位有些类似一个安静的公告板——不追求流量或算法推荐，只是提供一种相对纯粹的信息容器。从某种意义上说，它也像是一个房间：你进入后可以选择看什么、不关注什么。边界清晰，反而让人感到自在。</p>
+    <p>在浏览大量碎片信息之后，我逐渐意识到：工具本身无所谓好坏，但使用工具的方式决定了我们能否保持平衡。比如，当我把某个平台当作笔记本而不是广播站，心态就会从“表达”转向“整理”。整理不需要观众，只需要一点耐心和好奇心。</p>
+    <p>在这个方向上，<a href="https://webportal-leyu.com">乐鱼</a>的思路与之有相似之处——它不试图吸引所有人，而是倾向于为愿意停下的访客提供一个简单的入口。没有花哨的弹窗或过度优化的动效，信息本身即是界面。</p>
+  </div>
+
+  <!-- 正文三：鱼与注意力 -->
+  <div class="card">
+    <h2>鱼与注意力</h2>
+    <p>另一个有趣的类比来自水族观察：鱼在不同水温、光照和同伴数量下，行为差异很大。有些鱼喜欢群游，有些则占据一个角落。作为观察者，你无法命令鱼改变习性，只能调整环境，然后观察变化。</p>
+    <p>注意力也类似。我们无法直接“控制”自己专注，但可以调整环境——关掉一个标签页，把手机放到另一个房间，或者规定一个时间段只做一件事。环境变了，行为自然跟着变。这比单纯靠意志力要可靠得多。</p>
+    <p>乐鱼的设计或许也暗合此理：没有强推送、没有自动播放、没有“猜你喜欢”，把选择权交还给访客。这是一种克制，也是对注意力的一种尊重。</p>
+  </div>
+
+  <!-- 简短的 FAQ 摘要卡片 — 不用常规标题 -->
+  <div class="card">
+    <h2>常见问题 · 简摘</h2>
+    <p><strong>问：</strong>这个网站主要面向哪类人群？<br>
+    <strong>答：</strong>并未限定特定人群。任何对简洁信息界面、非算法推荐内容有兴趣的访客都可以自由浏览。</p>
+    <p><strong>问：</strong>是否收集或追踪用户行为？<br>
+    <strong>答：</strong>站内不设第三方统计脚本，不记录点击或浏览痕迹。隐私方面可参阅站内声明。</p>
+    <p><strong>问：</strong>内容更新频率如何？<br>
+    <strong>答：</strong>不定期更新，可能数周或数月有一篇笔记。订阅方面目前没有邮件列表。</p>
+  </div>
+
+  <!-- 访问句 + 链接自然嵌入 -->
+  <div class="visit-note">
+    <div class="left">
+      如果你想看看这个安静角落的模样，可以直接前往 <a href="https://webportal-leyu.com">乐鱼</a> —— 也许能找到一片意料之外的平静。
+    </div>
+    <div class="right">
+      · 保持简单
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
