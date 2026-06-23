@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>再访 · 乐鱼 · 阅读记</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', 'Noto Sans SC', system-ui, -apple-system, Helvetica, sans-serif;
+            background-color: #f7f3ed;
+            color: #2c2b28;
+            line-height: 1.7;
+            padding: 2rem 1.2rem;
+        }
+        .page-wrap {
+            max-width: 780px;
+            margin: 0 auto;
+            background: #fcfaf7;
+            padding: 2.8rem 2.2rem;
+            border-radius: 24px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.03), 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        /* 文章标题区 */
+        .article-header {
+            margin-bottom: 2.2rem;
+            border-bottom: 1px solid #e4ddd3;
+            padding-bottom: 1.2rem;
+        }
+        .article-title {
+            font-size: 2rem;
+            font-weight: 460;
+            letter-spacing: 2px;
+            color: #2c2b28;
+            margin-bottom: 0.6rem;
+            line-height: 1.3;
+        }
+        .article-meta {
+            font-size: 0.85rem;
+            color: #7d7870;
+            letter-spacing: 1px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0 1.5rem;
+        }
+        .article-meta span::before {
+            content: "· ";
+            color: #c7b9a8;
+        }
+        .article-meta span:first-child::before { content: ""; }
+
+        /* 导语 */
+        .lead {
+            font-size: 1.1rem;
+            color: #4d4842;
+            background: #efe8de;
+            padding: 1.2rem 1.6rem;
+            border-radius: 14px;
+            margin-bottom: 2.4rem;
+            border-left: 5px solid #b8a387;
+            letter-spacing: 0.3px;
+        }
+
+        /* 正文段落 */
+        .body-text p {
+            margin-bottom: 1.5rem;
+            text-indent: 2em;
+            font-size: 1.02rem;
+            color: #363432;
+        }
+        .body-text p:first-of-type { text-indent: 0; }
+
+        /* 引用提示块 */
+        .insight-block {
+            background: #f2ede5;
+            padding: 1.4rem 1.8rem;
+            margin: 2rem 0;
+            border-radius: 20px;
+            font-style: normal;
+            border: 1px solid #dfd6c9;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            position: relative;
+        }
+        .insight-block::before {
+            content: "📌 收藏者笔记";
+            display: block;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            color: #887b69;
+            margin-bottom: 0.6rem;
+            text-transform: uppercase;
+        }
+        .insight-block p {
+            margin: 0.4rem 0;
+            text-indent: 0;
+            color: #3b3833;
+        }
+
+        /* 引用块（简洁） */
+        .pull-quote {
+            border-left: 3px solid #bfa88c;
+            padding: 0.4rem 0 0.4rem 1.4rem;
+            margin: 1.6rem 0 1.8rem 0;
+            color: #5a5248;
+            font-size: 1.05rem;
+            background: transparent;
+        }
+
+        /* 访问句 */
+        .visit-sentence {
+            margin-top: 2.8rem;
+            padding: 1.6rem 0 0.2rem 0;
+            border-top: 1px solid #e2d9ce;
+            font-size: 1.03rem;
+            color: #3f3b35;
+            text-align: left;
+        }
+        .visit-sentence a {
+            color: #7f6b53;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            text-decoration-color: #c7b39b;
+            font-weight: 450;
+        }
+        .visit-sentence a:hover {
+            color: #4f3e2e;
+            text-decoration-color: #4f3e2e;
+        }
+
+        /* 底部 */
+        .footer-note {
+            margin-top: 3rem;
+            font-size: 0.82rem;
+            color: #8f867b;
+            text-align: left;
+            border-top: 1px dashed #dad1c5;
+            padding-top: 1.2rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 540px) {
+            body { padding: 1rem 0.8rem; }
+            .page-wrap { padding: 1.8rem 1.2rem; }
+            .article-title { font-size: 1.6rem; }
+            .lead { font-size: 1rem; padding: 1rem 1.2rem; }
+            .body-text p { font-size: 0.97rem; }
+            .insight-block { padding: 1rem 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+
+    <!-- 文章标题 -->
+    <div class="article-header">
+        <h1 class="article-title">再次打开，就像翻开一本旧书</h1>
+        <div class="article-meta">
+            <span>阅读手记</span>
+            <span>收藏 · 回访</span>
+            <span>乐鱼</span>
+        </div>
+    </div>
+
+    <!-- 导语 -->
+    <div class="lead">
+        有些地方，不需要每天去，却总会在某个安静的下午想起，然后自然而然地回到那里。重新打开，发现页面还带着熟悉的温度，内容依旧是喜欢的节奏。
+    </div>
+
+    <!-- 正文 -->
+    <div class="body-text">
+        <p>浏览器书签栏里，躺着不少收藏过的页面。有的再也没打开，有的打开过却忘了为什么存下来。但总有那么一两个，隔上几周或几个月，会特意点进去——不是为了新鲜事，只是想去看看那个安静的角落还在不在。对我而言，<a href="https://webofficial-leyu.com" style="color:#7f6b53; text-decoration:underline; text-underline-offset:2px;">乐鱼</a>就是这样一个地方。它不喧闹，不催促，页面干干净净，好像一直在等你回来。</p>
+
+        <p>第一次发现时，只是随手翻了翻，觉得内容舒服，就收进了收藏夹。后来有一阵子忙，几乎忘了它的存在。直到某天整理标签，看到那个名字，才点进去。页面加载很快，布局还是印象里的样子，但细看又能察觉一些微调——版式更舒展了，字间距也大了些。那种感觉就像走进一家常去的旧书店，老板没换，书架的位置也差不多，但灯光比上次更暖了。</p>
+
+        <div class="pull-quote">
+            “收藏的真正意义，不是占有，而是‘还记得回来’。”
+        </div>
+
+        <p>后来我养成了一个习惯：每隔一段时间，特意去回访那些收藏夹里的站点。有的已经打不开，有的改得面目全非，但也有不少像<a href="https://webofficial-leyu.com" style="color:#7f6b53; text-decoration:underline; text-underline-offset:2px;">乐鱼</a>这样，一直保持着稳定的质感。它们不追热点，不搞弹窗，甚至很少更新，但每次去都能读出一点新味道——可能是自己心境变了，也可能是那些内容本身就有层次，经得起反复看。</p>
+
+        <p>我开始理解，为什么有人愿意把某个页面留在书签栏最显眼的位置。不是因为非看不可，而是因为那个地方提供了一种“可回返”的安心。就像一本读过的散文集，放在枕边，偶尔翻到折角的那页，还能接着上次的思绪继续读下去。</p>
+
+        <!-- 提示块：收藏与回访 -->
+        <div class="insight-block">
+            <p>如果你也喜欢在收藏夹里留几个安静的去处，不妨把这里加进去。不用特意记着来看，哪天路过，点开就好。好页面就像老朋友，不会因为你一段时间没来就变了脸色。</p>
+        </div>
+
+        <p>当然，收藏并不只是为了自己。偶尔也会把链接分享给朋友，附上一句“这个不错”。但更多时候，收藏是一种私人的仪式——标记一个喜欢的角落，提醒自己：世界很大，但有些地方值得再次踏入。而每一次回访，都是对当初那份喜欢的小小确认。</p>
+
+        <p>所以，如果你此刻正读到这行字，并且觉得这个页面还算顺眼，不妨做个小动作：把它放进浏览器的书签，或者记在备忘录里。下次想找个安静的网页待一会儿时，自然会想起这里的白底、灰字，和那句没说出口的“欢迎回来”。</p>
+    </div>
+
+    <!-- 访问句（自然嵌入链接） -->
+    <div class="visit-sentence">
+        <p>如果你还没收藏，不妨现在就试试——浏览器地址栏里输入那个熟悉的名字：<a href="https://webofficial-leyu.com">乐鱼</a>，让它成为你书签栏里一个安静的存在。</p>
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer-note">
+        <span>阅读 · 回访 · 收藏的仪式 ｜ 记于一个安静的下午</span>
+    </div>
+
+</div>
+</body>
+</html>
